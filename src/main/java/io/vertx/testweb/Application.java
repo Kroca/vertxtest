@@ -10,7 +10,7 @@ public class Application extends AbstractVerticle {
                 .requestHandler(ra -> ra.response().end("ok"))
                 .listen(8080, result -> {
                     if(result.succeeded()){
-                        startPromise.complete();//
+                        startPromise.complete();
                     }else{
                         startPromise.fail(result.cause());
                     }
